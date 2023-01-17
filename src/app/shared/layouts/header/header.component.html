@@ -1,0 +1,195 @@
+<header class="py-4 px-3 w-full h-14 flex items-center bg-white">
+  <nav class="flex items-center lg:justify-between w-full max-w-6xl mx-auto">
+
+    <div class="flex items-center w-full">
+
+      <a class="hidden md:flex">
+        <img src="/assets/images/logo.svg">
+      </a>
+
+      <a class="md:hidden px-3 w-16 ">
+        <img class="h-8 w-8 rounded-full"
+          src="https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY"
+          alt="User image">
+      </a>
+
+      <button class="mx-6 text-neutral-500 hidden md:flex lg:hidden w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
+          class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z">
+          </path>
+        </svg>
+      </button>
+
+      <div class="relative flex md:hidden lg:flex items-center w-full lg:w-72">
+        <div class="absolute left-4 text-neutral-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
+            class="mercado-match" width="16" height="16" focusable="false">
+            <path
+              d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z">
+            </path>
+          </svg>
+        </div>
+        <input type="text" placeholder="Search"
+          class="ml-1 p-2 pl-10 rounded-sm bg-slate-100 placeholder:text-neutral-500 w-full lg:w-72">
+      </div>
+
+      <a class="md:hidden px-4 text-neutral-500 hover:text-zinc-900">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+          class="mercado-match" width="24" height="24" focusable="false">
+          <path
+            d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
+          </path>
+        </svg>
+      </a>
+
+    </div>
+
+    <ul class="flex items-center justify-between h-14 absolute bottom-0 left-0 right-0 md:relative">
+
+      <li>
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light">Home</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path
+              d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z">
+            </path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light whitespace-nowrap">My Network</span>
+        </a>
+      </li>
+
+      <li class="md:hidden">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="post-fill-medium" data-supported-dps="24x24"
+            fill="currentColor">
+            <path
+              d="M18 3H6a3 3 0 00-3 3v12a3 3 0 003 3h12a3 3 0 003-3V6a3 3 0 00-3-3zm-5 8h4v2h-4v4h-2v-4H7v-2h4V7h2z">
+            </path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light">Post</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path
+              d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z">
+            </path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light">Jobs</span>
+        </a>
+      </li>
+
+      <li class="relative hidden md:flex">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path
+              d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
+            </path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light">Messaging</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path
+              d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z">
+            </path>
+          </svg>
+          <span class="md:hidden lg:block text-sm font-light">Notifications</span>
+        </a>
+      </li>
+
+      <li class="relative hidden md:flex">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900"
+          (click)="onMe()">
+          <img class="h-6 w-6 rounded-full"
+            src="https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY"
+            alt="User image">
+          <div class="flex md:flex items-center">
+            <span class=" font-light">Me</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
+              class="mercado-match" width="16" height="16" focusable="false">
+              <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+        </a>
+
+        <div *ngIf="show_me"
+          class="absolute w-64 bg-white right-1 top-12 py-1 mt-2 border border-1 border-neutral-200 rounded-md cursor-pointer divide-y shadow-md">
+          <div class="px-3 py-2">
+            <div class="flex">
+              <img class="h-14 w-14 rounded-full"
+                src="https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY"
+                alt="User image">
+              <div class="ml-3">
+                <p class="font-semibold ">Karim Bourass</p>
+                <p class="font-light ">Software Enginner</p>
+              </div>
+            </div>
+            <button class="w-full my-3 rounded-full border border-1 border-[#0a66c2] text-[#0a66c2]">View
+              Profile</button>
+          </div>
+
+          <div class="px-3 py-2 flex flex-col gap-y-1">
+            <p class="font-semibold text-lg">Account</p>
+            <a class="font-light text-neutral-500">Settings & Privacy</a>
+            <a class="font-light text-neutral-500">Help</a>
+            <a class="font-light text-neutral-500">Language</a>
+          </div>
+
+          <div class="px-3 py-2 flex flex-col gap-y-1">
+            <p class="font-semibold text-lg">Manage</p>
+            <a class="font-light text-neutral-500">Posts & Activity</a>
+            <a class="font-light text-neutral-500">Job Posting account</a>
+          </div>
+          <div class="px-3 py-1">
+            <a class="font-light text-neutral-500">Sign out</a>
+          </div>
+        </div>
+
+
+      </li>
+
+
+      <li class="hidden md:flex">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
+            class="mercado-match" width="24" height="24" focusable="false">
+            <path
+              d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z">
+            </path>
+          </svg>
+          <div class="flex">
+            <span class="hidden md:block text-sm font-light">Work</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
+              class="mercado-match" width="16" height="16" focusable="false">
+              <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
