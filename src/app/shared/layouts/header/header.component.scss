@@ -8,7 +8,9 @@ header {
 }
 
 .active-link {
-  border-bottom: 2px solid black;
+  @media only screen and (min-width: 1024px) {
+    border-bottom: 2px solid black;
+  }
   a {
     color: black;
   }
