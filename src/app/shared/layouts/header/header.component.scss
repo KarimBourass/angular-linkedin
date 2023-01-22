@@ -6,3 +6,10 @@ header {
   padding-right: 1.25em;
   border-right: 1px solid #00000014;
 }
+
+.active-link {
+  border-bottom: 2px solid black;
+  a {
+    color: black;
+  }
+}
