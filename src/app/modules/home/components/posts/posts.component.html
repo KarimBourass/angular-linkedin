@@ -1,8 +1,15 @@
 <div class="flex flex-col gap-y-3">
 
-  <div *ngFor="let post of POSTS" class="bg-white rounded-md">
+  <start-post class="hidden md:block"></start-post>
 
-    <div class="flex items-start  justify-between py-2 px-4">
+  <div class="flex items-center">
+    <hr class="h-px flex-grow mr-2 bg-gray-200 border-0 dark:bg-neutral-300">
+    <span class="text-sm text-neutral-500 font-light">Sort By : <b class="text-black font-semibold">Top</b></span>
+  </div>
+
+  <div *ngFor="let post of POSTS" class="bg-white rounded-md" style="border: 1px solid #e9e8e5;">
+
+    <div class="flex items-start justify-between py-2 px-4">
       <div class="flex items-center">
         <img class="h-12 w-12 rounded-full" [src]="post.profile_pic" alt="User image">
 

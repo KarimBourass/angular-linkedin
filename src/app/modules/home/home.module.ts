@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './components/posts/posts.component';
+import { StartPostComponent } from './components/start-post/start-post.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    PostsComponent
+    PostsComponent,
+    StartPostComponent
   ],
   imports: [
     CommonModule,
