@@ -5,3 +5,28 @@
   position: absolute;
   border-radius: 6px 6px 0 0;
 }
+
+
+.tooltip{
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #EFEFEF;
+  padding: .5em .75em;
+  border-radius: 6px;
+  color: black;
+  position: absolute;
+  z-index: 1;
+  top: -25px;
+  right: 30px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
