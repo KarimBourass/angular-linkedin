@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './layouts/header/header.component';
+import { ConnectionLevelComponent } from './components/connection-level/connection-level.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    ConnectionLevelComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    ConnectionLevelComponent
   ]
 })
 export class SharedModule { }
