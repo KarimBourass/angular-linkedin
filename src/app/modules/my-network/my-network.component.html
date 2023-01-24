@@ -1,0 +1,81 @@
+<div class="max-w-4xl lg:max-w-6xl mx-auto flex flex-col md:flex-row gap-y-3 gap-x-6 mt-5">
+
+  <div class="bg-white md:rounded-md shadow-md w-full md:w-80 flex-wrap">
+    <p class="text-lg mt-3 mx-3">Manage my network</p>
+    <div class="mt-3">
+      <div *ngFor="let link of displayed_links"
+        class="flex text-neutral-500 px-4 py-2 hover:bg-zinc-100 cursor-pointer ">
+        <img [src]="link.icon_path" alt="Connections icon">
+        <span class="flex-grow ml-3 text-lg">{{link.title}}</span>
+        <span *ngIf="link.num" class="text-lg">{{link.num}}</span>
+      </div>
+    </div>
+    <button (click)="onShow()" class="hover:bg-zinc-200 hover:rounded-md m-2">
+      <div *ngIf="is_show_less" class="flex items-center py-1 px-2">
+        <span class="text-neutral-500 ml-3 text-lg font-semibold">Show less</span>
+        <img class="ml-3" src="/assets/images/shared/arrow-up.svg" alt="Show less">
+      </div>
+      <div *ngIf="!is_show_less" class="flex items-center py-1 px-2">
+        <span class="text-neutral-500 ml-3 text-lg font-semibold">Show more</span>
+        <img class="ml-3" src="/assets/images/shared/arrow-down.svg" alt="Show more">
+      </div>
+    </button>
+  </div>
+
+
+  <!-- Right side -->
+  <div class="md:flex-grow mb-20">
+    <div class="bg-white md:rounded-md shadow-md divide-y">
+      <div class="px-3 p-2 flex items-center justify-between">
+        <span>Invitations</span>
+        <span class="text-neutral-500 ml-3 text-lg font-semibold">See all 41</span>
+      </div>
+      <div class="divide-y">
+        <div *ngFor="let item of [1,2,3,4,5,6,7]" class="px-2 py-2 flex lg:items-center flex-col lg:flex-row">
+          <div class="flex-grow flex items-center">
+            <img class="h-20 w-20 rounded-full z-10 ring-2 ring-white"
+              src="https://i.ibb.co/RCF71gL/image.webp"
+              alt="User image">
+            <div class="flex flex-col ml-3">
+              <span class="font-semibold text-lg">Bob Alice</span>
+              <span class="text-neutral-500">Engineering student in Big Data and New techmologies </span>
+              <span class="text-sm text-neutral-500">Hassen and 26 others</span>
+            </div>
+          </div>
+          <div class="flex justify-center items-center mt-2 lg:mt-0">
+            <button class="text-neutral-500 text-lg font-semibold px-5 py-1">Ignore</button>
+            <button class="text-[#0a66c2] text-lg font-semibold px-5 py-1 rounded-full"
+              style="border: 1px solid #0a66c2">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-md shadow-md mt-4">
+      <div class="px-3 p-2 flex items-center justify-between">
+        <span>Trending pages in your network</span>
+        <span class="text-neutral-500 ml-3 text-lg font-semibold">See all</span>
+      </div>
+      <!-- <div class="py-2 px-4 flex flex-wrap gap-x-3">
+        <div *ngFor="let ite of [1,2,3,4,5,6,7,8]" class=" flex flex-col items-center p-3 rounded-md relative" style="border: 1px soldi #666666;">
+          <img class="absolute w-full top-0 rounded-md"
+            src="https://media.licdn.com/dms/image/C4E1BAQHHcQ5JzIGezg/company-background_200/0/1623060357519?e=1675198800&v=beta&t=VZytsLw3oQ8L2K3bNKHvrt5aodgKYbw04YAGYmDPd_s"
+            alt="">
+          <img class="z-10 w-24 mt-10"
+            src="https://media.licdn.com/dms/image/C4E0BAQG7tCApXjXjNw/company-logo_200_200/0/1657632193814?e=1682553600&v=beta&t=nzdHjoSOfRtsOiAMUT8AKfQhR0dXGL9GbEubIgKGtyA"
+            alt="">
+          <span class="text-lg text-center font-semibold">Orange Business Services Maroc</span>
+          <span class="text-sm text-neutral-500 my-1">36,346 followers</span>
+          <button class="text-[#0a66c2] text-lg font-semibold px-5 py-1 rounded-full"
+            style="border: 1px solid #0a66c2">Accept</button>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+
+
+
+
+
+</div>
