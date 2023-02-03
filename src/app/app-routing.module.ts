@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'mynetwork',
     loadChildren: () => import('./modules/my-network/my-network.module').then(m => m.MyNetworkModule),
   },
+  {
+    path: 'jobs',
+    loadChildren: () => import('./modules/jobs/jobs.module').then(m => m.JobsModule),
+  },
   { path: '', redirectTo: '/feed', pathMatch: 'full' }
 ];
 
