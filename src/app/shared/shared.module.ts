@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './layouts/header/header.component';
 import { ConnectionLevelComponent } from './components/connection-level/connection-level.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -17,7 +18,8 @@ import { ConnectionLevelComponent } from './components/connection-level/connecti
   ],
   exports:[
     HeaderComponent,
-    ConnectionLevelComponent
+    ConnectionLevelComponent,
+    InfiniteScrollModule,
   ]
 })
 export class SharedModule { }
