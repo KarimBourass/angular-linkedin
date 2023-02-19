@@ -28,28 +28,66 @@
     <div class="bg-white md:rounded-md shadow-md divide-y">
       <div class="px-3 p-2 flex items-center justify-between">
         <span>Invitations</span>
-        <span class="text-neutral-500 ml-3 text-lg font-semibold">See all 41</span>
+        <span class="text-neutral-500 ml-3 text-lg font-semibold">See all {{(invitations$ | async)?.length}}</span>
       </div>
       <div class="divide-y">
-        <div *ngFor="let item of [1,2,3,4,5,6,7]" class="px-2 py-2 flex lg:items-center flex-col lg:flex-row">
-          <div class="flex-grow flex items-center">
-            <img class="h-20 w-20 rounded-full z-10 ring-2 ring-white"
-              src="https://i.ibb.co/RCF71gL/image.webp"
-              alt="User image">
-            <div class="flex flex-col ml-3">
-              <span class="font-semibold text-lg">Bob Alice</span>
-              <span class="text-neutral-500">Engineering student in Big Data and New techmologies </span>
-              <span class="text-sm text-neutral-500">Hassen and 26 others</span>
+
+        <div *ngFor="let invitation of (invitations$ | async);index as index">
+          <div [ngSwitch]="invitation.invitation_state">
+
+            <div *ngSwitchCase="'pending'" class="px-2 py-2 flex lg:items-center flex-col lg:flex-row">
+              <div class="flex-grow flex items-center">
+                <img class="h-20 w-20 rounded-full z-10 ring-2 ring-white" [src]="invitation.profile_image"
+                  alt="User image">
+                <div class="flex flex-col ml-3">
+                  <span class="font-semibold text-lg">{{invitation.name}}</span>
+                  <span class="text-neutral-500">{{invitation.bio}} </span>
+                  <span class="text-sm text-neutral-500">{{invitation.connections}}</span>
+                </div>
+              </div>
+              <div class="flex justify-center items-center mt-2 lg:mt-0">
+                <button class="text-neutral-500 text-lg font-semibold px-5 py-1"
+                  (click)="onIgnore(invitation)">Ignore</button>
+                <button class="text-[#0a66c2] text-lg font-semibold px-5 py-1 rounded-full"
+                  style="border: 1px solid #0a66c2" (click)="onAccept(invitation)">Accept</button>
+              </div>
             </div>
+
+            <div *ngSwitchCase="'accepted'" class="px-2 py-2 flex items-center justify-between">
+              <div class="flex items-center ">
+                <img class="h-12 w-12 rounded-full z-10 ring-2 ring-white" [src]="invitation.profile_image"
+                  alt="User image">
+                <p class="mx-2">{{invitation.name}} is now a connection</p>
+                <a href="/" class="text-[#0a66c2] font-semibold">Message</a>
+              </div>
+
+              <button (click)="onRemove(index)" class="mr-4 hover:bg-zinc-100 p-2 rounded-full">
+                <img class="h-4 w-4 rounded-full z-10" src="/assets/images/shared/close.svg" alt="User image">
+              </button>
+
+            </div>
+
+            <div *ngSwitchCase="'ignored'" class="px-2 py-2 flex items-center justify-between">
+              <div class="flex items-center ">
+                <img class="h-12 w-12 rounded-full z-10 ring-2 ring-white" [src]="invitation.profile_image"
+                  alt="User image">
+                <p class="ml-4">invitation declined</p>
+              </div>
+
+              <button (click)="onRemove(index)" class="mr-4 hover:bg-zinc-100 p-2 rounded-full">
+                <img class="h-4 w-4 rounded-full z-10" src="/assets/images/shared/close.svg" alt="User image">
+              </button>
+
+            </div>
+
           </div>
-          <div class="flex justify-center items-center mt-2 lg:mt-0">
-            <button class="text-neutral-500 text-lg font-semibold px-5 py-1">Ignore</button>
-            <button class="text-[#0a66c2] text-lg font-semibold px-5 py-1 rounded-full"
-              style="border: 1px solid #0a66c2">Accept</button>
-          </div>
+
+
         </div>
+
       </div>
     </div>
+
     <div class="bg-white rounded-md shadow-md mt-4">
       <div class="px-3 p-2 flex items-center justify-between">
         <span>Trending pages in your network</span>
