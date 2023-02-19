@@ -1,4 +1,6 @@
+import { PostService } from '../../post.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-posts',
@@ -8,86 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class PostsComponent implements OnInit {
 
   posts: any[] = []
+  posts$!: Observable<any[]>
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.posts = this.POSTS
+  constructor(private postService: PostService) {
   }
 
-
-  POSTS = [
-    {
-      id: 0,
-      name: "Ousmane Diot",
-      bio: "Ex Googler (Engineering Manager)",
-      created_at: "20h",
-      profile_pic: "https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY",
-      connection_level: 2,
-      text: `
-      When a manager asks "how long will it take to code new feature X"... The answer is, "I don't know".
-        You don't know because nobody can predict the future. It's an unrealistic question. There are way too many
-        variables with software you can't possibly consider all of them, and if you did, you will have already coded the
-        entire thing in your head.
-        The best thing is to focus on meeting the requirements and doing so correctly. Don't let the pressure to meet some
-        deadline make you create bad code.
-        `,
-
-      likes_count: 23,
-      commnets_count: 23,
-      reposts_count: 28,
-      type: "person",
-      is_liked: false,
-    },
-    {
-      id: 1,
-      name: "Ousmane Diot",
-      bio: "Ex Googler (Engineering Manager)",
-      created_at: "20h",
-      profile_pic: "https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY",
-      connection_level: 2,
-      text: `
-      When a manager asks "how long will it take to code new feature X"... The answer is, "I don't know".
-        You don't know because nobody can predict the future. It's an unrealistic question. There are way too many
-        variables with software you can't possibly consider all of them, and if you did, you will have already coded the
-        entire thing in your head.
-        The best thing is to focus on meeting the requirements and doing so correctly. Don't let the pressure to meet some
-        deadline make you create bad code.
-        `,
-
-      likes_count: 23,
-      commnets_count: 23,
-      reposts_count: 28,
-      type: "person",
-      is_liked: false,
-    },
-    {
-      id: 2,
-      name: "Ousmane Diot",
-      bio: "Ex Googler (Engineering Manager)",
-      created_at: "20h",
-      profile_pic: "https://media.licdn.com/dms/image/C4E03AQGPgOM1ndeQsg/profile-displayphoto-shrink_100_100/0/1596567396773?e=1679529600&v=beta&t=rJWfCqpgCIqR_XmHyZiUAOLXreS3AOSXm00xLKrvMsY",
-      connection_level: 2,
-      text: `
-      When a manager asks "how long will it take to code new feature X"... The answer is, "I don't know".
-        You don't know because nobody can predict the future. It's an unrealistic question. There are way too many
-        variables with software you can't possibly consider all of them, and if you did, you will have already coded the
-        entire thing in your head.
-        The best thing is to focus on meeting the requirements and doing so correctly. Don't let the pressure to meet some
-        deadline make you create bad code.
-        `,
-
-      likes_count: 23,
-      commnets_count: 23,
-      reposts_count: 28,
-      type: "person",
-      is_liked: false,
-    },
-  ]
-
+  ngOnInit(): void {
+    this.posts$ = this.postService.getPosts()
+  }
 
   onScroll() {
-    this.posts = [...this.posts, ...this.POSTS]
+    console.log("onScroll");
   }
 
   onLikePost(post: any) {

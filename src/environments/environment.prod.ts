@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  API: "https://my-json-server.typicode.com/KarimBourass/angular-linkedin-api/"
 };
