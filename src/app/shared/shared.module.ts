@@ -17,6 +17,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     RouterModule
   ],
   exports:[
+    CommonModule,
     HeaderComponent,
     ConnectionLevelComponent,
     InfiniteScrollModule,

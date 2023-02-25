@@ -1,6 +1,5 @@
 import { SharedModule } from '../../shared/shared.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './components/posts/posts.component';
@@ -25,7 +24,6 @@ const routes: Routes = [
     HomeUserSuggestionComponent
   ],
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule.forChild(routes)
   ]

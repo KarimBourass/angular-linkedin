@@ -8,7 +8,7 @@
   </div>
 
   <div infinite-scroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="1000" (scrolled)="onScroll()">
-    <div *ngFor="let post of posts$ | async" class="bg-white rounded-md  mt-3" style="border: 1px solid #e9e8e5;">
+    <div *ngFor="let post of posts" class="bg-white rounded-md  mt-3" style="border: 1px solid #e9e8e5;">
       <div class="flex items-start justify-between py-2 px-4">
         <div class="flex items-center">
           <img class="h-12 w-12 rounded-full" [src]="post.profile_pic" alt="User image">

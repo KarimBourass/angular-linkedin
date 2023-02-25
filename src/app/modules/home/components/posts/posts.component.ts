@@ -1,29 +1,27 @@
 import { PostService } from '../../post.service';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import {Post} from "../../models/home.models";
 
 @Component({
-  selector: 'app-posts',
+  selector: 'home-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
 
-  posts: any[] = []
-  posts$!: Observable<any[]>
+  posts: Post[] = []
 
-  constructor(private postService: PostService) {
-  }
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.posts$ = this.postService.getPosts()
+    this.postService.getPosts().subscribe((data:Post[])=> this.posts = data);
   }
 
   onScroll() {
-    console.log("onScroll");
+    this.postService.getPosts().subscribe((data:Post[])=> {this.posts = [...this.posts, ...data]})
   }
 
-  onLikePost(post: any) {
+  onLikePost(post: Post) {
     post.is_liked = !post.is_liked
     if (post.is_liked)
       post.likes_count += 1

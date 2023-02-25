@@ -13,6 +13,9 @@ const routes: Routes = [
   {
     path: 'jobs',
     loadChildren: () => import('./modules/jobs/jobs.module').then(m => m.JobsModule),
+  },  {
+    path: 'notifications',
+    loadChildren: () => import('./modules/notifications/notifications.module').then(m => m.NotificationsModule),
   },
   { path: '', redirectTo: '/feed', pathMatch: 'full' }
 ];

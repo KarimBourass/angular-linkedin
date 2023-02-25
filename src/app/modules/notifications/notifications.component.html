@@ -1,0 +1,44 @@
+<div class="max-w-4xl lg:max-w-6xl mx-auto flex flex-col md:flex-row gap-y-3 gap-x-6 mt-5">
+
+  <div class="bg-white  h-fit md:rounded-md shadow-md w-full md:w-60  flex-wrap px-3 py-4">
+    <p class="text-lg font-medium mb-2">Manage your Notifications</p>
+    <span class="text-[#0a66c2] font-medium">View Settings</span>
+  </div>
+
+
+  <div class="md:flex-grow mb-20">
+    <div class="bg-white p-2 md:rounded-md shadow-md">
+      <div *ngFor="let item of [1,2,3,4,5]" class="flex items-center px-2 py-3">
+        <img class="h-16 w-16 rounded-full" src="https://i.ibb.co/RCF71gL/image.webp" alt="User image">
+        <p class="ml-2">Bob is hiring. Help Bob by sharing this job with your network: Graphic designer</p>
+        <div class="ml-3 flex flex-col items-end">
+        <span class="text-neutral-500 text-xs">21m</span>
+        <button class="hover:bg-zinc-100 p-2 rounded-full">
+          <img class="h-8 w-8 rounded-full" src="/assets/images/shared/more-horiz.svg" alt="Notification setting">
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hidden lg:flex w-80 rounded-md">
+    <div class="bg-white w-full h-fit rounded-md shadow-md px-3">
+      <div class="flex items-center justify-end">
+        <span>Ad</span>
+        <button class="hover:bg-zinc-100 p-2 rounded-full">
+          <img class="h-4 w-4 rounded-full" src="/assets/images/shared/more-horiz.svg" alt="Notification setting">
+        </button>
+      </div>
+      <div class="text-center mt-6">
+        <p class="text-neutral-700 text-sm">Are you an Angular Developer ?</p>
+        <p class="mt-2">Feel free contribute to this project, github link below</p>
+      </div>
+      <div class="w-full flex justify-center mt-8 mb-4">
+        <a class="text-[#0a66c2] text-lg font-semibold px-5 py-1 rounded-full"  style="border: 1px solid #0a66c2" >Github Link</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
