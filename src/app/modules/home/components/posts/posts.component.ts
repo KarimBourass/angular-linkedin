@@ -23,10 +23,7 @@ export class PostsComponent implements OnInit {
 
   onLikePost(post: Post) {
     post.is_liked = !post.is_liked
-    if (post.is_liked)
-      post.likes_count += 1
-    else
-      post.likes_count -= 1
+    post.likes_count = post.is_liked ? post.likes_count + 1 : post.likes_count - 1
   }
 
 

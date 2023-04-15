@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'home-user-info',
   templateUrl: './home-user-info.component.html',
   styleUrls: ['./home-user-info.component.scss']
 })
-export class HomeUserInfoComponent implements OnInit {
+export class HomeUserInfoComponent  {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
