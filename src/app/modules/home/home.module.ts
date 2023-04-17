@@ -1,11 +1,16 @@
-import { SharedModule } from '../../shared/shared.module';
-import { NgModule } from '@angular/core';
-import { HomeComponent } from './home.component';
-import { RouterModule, Routes } from '@angular/router';
-import { PostsComponent } from './components/posts/posts.component';
-import { StartPostComponent } from './components/start-post/start-post.component';
-import { HomeUserInfoComponent } from './components/home-user-info/home-user-info.component';
-import { HomeUserSuggestionComponent } from './components/home-user-suggestion/home-user-suggestion.component';
+import {SharedModule} from '../../shared/shared.module';
+import {NgModule} from '@angular/core';
+import {HomeComponent} from './home.component';
+import {RouterModule, Routes} from '@angular/router';
+import {PostsComponent} from './components/posts/posts.component';
+import {StartPostComponent} from './components/start-post/start-post.component';
+import {HomeUserInfoComponent} from './components/home-user-info/home-user-info.component';
+import {HomeUserSuggestionComponent} from './components/home-user-suggestion/home-user-suggestion.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {CreatePostDialogComponent} from './dialogs/create-post-dialog/create-post-dialog.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {NgOptimizedImage} from "@angular/common";
+import {MatIconModule} from '@angular/material/icon';
 
 const routes: Routes = [
   {
@@ -21,11 +26,17 @@ const routes: Routes = [
     PostsComponent,
     StartPostComponent,
     HomeUserInfoComponent,
-    HomeUserSuggestionComponent
+    HomeUserSuggestionComponent,
+    CreatePostDialogComponent
   ],
   imports: [
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatDialogModule,
+    MatDividerModule,
+    NgOptimizedImage,
+    MatIconModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+}

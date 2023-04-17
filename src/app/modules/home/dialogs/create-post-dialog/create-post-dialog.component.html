@@ -1,0 +1,36 @@
+<div>
+  <div class="flex justify-between items-center">
+    <h1 mat-dialog-title>Create a post </h1>
+    <button mat-dialog-close="true" class="mr-4 hover:bg-zinc-100 p-2 rounded-full">
+      <img class="h-5 w-5 rounded-full z-10" ngSrc="/assets/images/shared/close.svg" alt="Close button" height="16"
+           width="16">
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content>
+    <div class="flex items-center">
+      <img class="w-12 h-12 rounded-full" ngSrc="/assets/images/shared/user_image.jpeg" alt="User image" height="400"
+           width="400">
+      <div class="ml-2">
+        <p class="text-black font-medium">Karim Bourass</p>
+        <button class="flex items-center gap-x-2 border-2 rounded-full py-1 px-2 hover:bg-zinc-200 ">
+          <img src="/assets/images/home/group.svg" alt="Group icon"/>
+          Connections only
+          <img alt="Arrow down" src="/assets/images/shared/arrow-down.svg"/>
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <textarea class="w-full rounded-lg p-2 text-lg" placeholder="What do you want to talk about?"></textarea>
+    </div>
+
+  </div>
+  <mat-divider></mat-divider>
+  <div class="flex items-center justify-between p-4">
+    <p class="text-neutral-500">Connections</p>
+    <button class="bg-[#0a66c2] text-white py-1 px-4 text-lg rounded-full">Post</button>
+  </div>
+</div>
+
+
