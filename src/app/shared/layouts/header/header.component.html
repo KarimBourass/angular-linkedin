@@ -101,7 +101,7 @@
       </li>
 
       <li class="relative hidden md:flex">
-        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900 ">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900" (click)="is_new_messages = false">
           <div class="relative">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
                  class="mercado-match" width="24" height="24" focusable="false">
@@ -109,7 +109,7 @@
                 d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z">
               </path>
             </svg>
-            <span
+            <span *ngIf="is_new_messages"
               class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-2 -top-1">1</span>
           </div>
           <span class="md:hidden lg:block text-xs md:text-sm font-light">Messaging</span>
@@ -117,7 +117,7 @@
       </li>
 
       <li routerLinkActive="active-link" class="lg:h-full pt-1">
-        <a routerLink="/notifications"
+        <a routerLink="/notifications" (click)="is_new_notification= false"
            class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900 relative">
           <div class="relative ">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
@@ -126,7 +126,7 @@
                 d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z">
               </path>
             </svg>
-            <span
+            <span *ngIf="is_new_notification"
               class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-1 -top-1">2</span>
           </div>
           <span class="md:hidden lg:block text-xs md:text-sm font-light">Notifications</span>
@@ -196,10 +196,9 @@
           </svg>
           <div class="flex">
             <span class="hidden md:block text-sm font-light">Work</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
-                 class="mercado-match" width="16" height="16" focusable="false">
-              <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
-            </svg>
+            <img class="h-4 w-4 rounded-full relative top-0.5"
+                 src="/assets/images/shared/filled-arrow-down.svg"
+                 alt="Arrow down icon">
           </div>
         </a>
       </li>

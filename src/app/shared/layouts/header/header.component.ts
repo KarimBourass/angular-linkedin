@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   show_me: boolean = false;
+  is_new_notification: boolean = true;
+  is_new_messages: boolean = true;
 
 
   onMe() {
