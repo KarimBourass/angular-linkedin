@@ -101,7 +101,8 @@
       </li>
 
       <li class="relative hidden md:flex">
-        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900" (click)="is_new_messages = false">
+        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900"
+           (click)="is_new_messages = false">
           <div class="relative">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor"
                  class="mercado-match" width="24" height="24" focusable="false">
@@ -110,7 +111,7 @@
               </path>
             </svg>
             <span *ngIf="is_new_messages"
-              class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-2 -top-1">1</span>
+                  class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-2 -top-1">1</span>
           </div>
           <span class="md:hidden lg:block text-xs md:text-sm font-light">Messaging</span>
         </a>
@@ -127,64 +128,15 @@
               </path>
             </svg>
             <span *ngIf="is_new_notification"
-              class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-1 -top-1">2</span>
+                  class="inline-flex items-center justify-center h-4 w-4 font-semibold text-xs text-white bg-red-700 rounded-full absolute -right-1 -top-1">2</span>
           </div>
           <span class="md:hidden lg:block text-xs md:text-sm font-light">Notifications</span>
         </a>
       </li>
 
       <li class="relative hidden md:flex">
-        <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900"
-           (click)="onMe()">
-          <img class="h-6 w-6 rounded-full"
-               src="/assets/images/shared/user_image.jpeg"
-               alt="User image">
-          <div class="flex md:flex items-center">
-            <span class=" font-light">Me</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor"
-                 class="mercado-match" width="16" height="16" focusable="false">
-              <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
-            </svg>
-          </div>
-        </a>
-
-        <div *ngIf="show_me"
-             class="absolute w-64 bg-white right-1 top-12 py-1 mt-2 border border-1 border-neutral-200 rounded-md cursor-pointer divide-y shadow-md">
-          <div class="px-3 py-2">
-            <div class="flex">
-              <img class="h-14 w-14 rounded-full"
-                   src="/assets/images/shared/user_image.jpeg"
-                   alt="User image">
-              <div class="ml-3">
-                <p class="font-semibold ">Karim Bourass</p>
-                <p class="font-light ">Software Enginner</p>
-              </div>
-            </div>
-            <button class="w-full my-3 rounded-full border border-1 border-[#0a66c2] text-[#0a66c2]">View
-              Profile
-            </button>
-          </div>
-
-          <div class="px-3 py-2 flex flex-col gap-y-1">
-            <p class="font-semibold text-lg">Account</p>
-            <a class="font-light text-neutral-500">Settings & Privacy</a>
-            <a class="font-light text-neutral-500">Help</a>
-            <a class="font-light text-neutral-500">Language</a>
-          </div>
-
-          <div class="px-3 py-2 flex flex-col gap-y-1">
-            <p class="font-semibold text-lg">Manage</p>
-            <a class="font-light text-neutral-500">Posts & Activity</a>
-            <a class="font-light text-neutral-500">Job Posting account</a>
-          </div>
-          <div class="px-3 py-1">
-            <a class="font-light text-neutral-500">Sign out</a>
-          </div>
-        </div>
-
-
+        <user-avatar-toggle></user-avatar-toggle>
       </li>
-
 
       <li class="hidden md:flex">
         <a class="flex flex-col items-center mx-2 md:mx-6 lg:mx-4 text-neutral-500 hover:text-zinc-900">
@@ -204,7 +156,5 @@
       </li>
 
     </ul>
-
   </nav>
-
 </header>

@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
 export class ConnectionLevelComponent {
 
 
-  // Connection lelvel :
+  // Connection level :
   // - 0 : not_connected
   // - 1 : connected
   // - 2 : 2nd
